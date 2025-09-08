@@ -2,7 +2,7 @@ import { initDatabase } from './db/init.js'
 import { Post } from './db/models/post.js'
 
 await initDatabase()
-/*
+
 const post1 = new Post({
   title: 'Hello Mongoose!',
   author: 'Huseyin Ergin',
@@ -29,12 +29,12 @@ const post3 = new Post({
 })
 
 await post3.save()
-*/
+
 const post4 = new Post({
   title: 'Hello Express',
   author: 'Daniel Bugl',
   contents: 'This is another post stored in a MongoDB Database using Mongoose.',
-  tags: ['leaving', 'sorrow'],
+  tags: ['mongo', 'mongoose'],
 })
 
 await post4.save()
