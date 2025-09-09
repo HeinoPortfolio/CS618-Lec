@@ -8,7 +8,7 @@ import { PostSorting } from './components/PostSorting'
 const posts = [
   {
     title: 'Full-Stack React Projects',
-    contents: "Let's become full-stack developers. ",
+    contents: "Let's become full-stack developers.",
     author: 'Daniel Bugl',
   },
   { title: 'Hello React!' },
