@@ -1,21 +1,19 @@
-//import { Post } from './components/Post.jsx'
 import { PostList } from './components/PostList'
 import { CreatePost } from './components/CreatePost'
 import { PostFilter } from './components/PostFilter'
 import { PostSorting } from './components/PostSorting'
-
-// Create a list of posts====================================================
-const posts = [
-  {
-    title: 'Full-Stack React Projects',
-    contents: "Let's become full-stack developers.",
-    author: 'Daniel Bugl',
-  },
-  { title: 'Hello React!' },
-]
+import { useQuery } from '@tanstack/react-query'
+import { getPosts } from './api/posts.js'
 
 // Show all the components for the page =====================================
 export function Blog() {
+  const postsQuery = useQuery({
+    queryKey: ['posts'],
+    queryFn: () => getPosts(),
+  })
+
+  const posts = postsQuery.data ?? []
+
   return (
     <div style={{ padding: 8 }}>
       <CreatePost />
