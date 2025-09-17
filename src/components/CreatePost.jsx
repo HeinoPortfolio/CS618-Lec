@@ -65,7 +65,12 @@ export function CreatePost() {
           <br />
           The post was created successfully!
         </>
-      ) : null}
+      ) : (
+        <>
+          <br />
+          Post was not created!!!
+        </>
+      )}
     </form>
   )
 }
