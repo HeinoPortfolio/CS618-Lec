@@ -23,7 +23,7 @@ export function Blog() {
       <CreatePost />
       <br />
       <hr />
-      Fitler By:
+      Filter By:
       <PostFilter
         field='author'
         value={author}
