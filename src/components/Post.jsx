@@ -13,7 +13,7 @@ export function Post({ title, contents, author, _id, fullPost = false }) {
           <h3>{title}</h3>
         </Link>
       )}
-      {fullPost && <div>{contents}</div>}
+      {fullPost && <div><pre>{contents}</pre></div>}
       {author && (
         <em>
           {fullPost && <br />}
